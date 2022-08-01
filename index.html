@@ -84,9 +84,14 @@
             font-weight: 900;
             background-color: hsl(120, 51%, 50%);
             cursor: pointer;
-            user-select:none;
+            user-select: none;
             box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
             transition: ease-in-out;
+        }
+
+        .bg-red {
+            background-color: #8b0000;
+            color: #eee;
         }
 
         .btn:active {
@@ -105,6 +110,7 @@
 
     <div class="btn-div">
         <button class="btn" onclick="display()">Click to Print</button>
+        <button class="btn bg-red" id="pdf-generate-btn">Click to Pdf</button>
         <script>
             function display() {
                 window.print();
@@ -112,67 +118,118 @@
         </script>
     </div>
 
-    <div class="main light">
+    <div id="element-to-print">
 
-        <h1>Hello World</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae officiis
-            eum
-            aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim dicta
-            soluta
-            praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
-            numquam
-            nihil ab voluptas quos.</p>
+        <div class="main dark">
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora sunt
-            facilis repellat explicabo adipisci porro!</p>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae
+                officiis
+                eum
+                aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim
+                dicta
+                soluta
+                praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
+                numquam
+                nihil ab voluptas quos.</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
-            assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore saepe
-            harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil minus
-            nobis. Recusandae, dignissimos doloribus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora
+                sunt
+                facilis repellat explicabo adipisci porro!</p>
 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
+                assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore
+                saepe
+                harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil
+                minus
+                nobis. Recusandae, dignissimos doloribus.</p>
+
+        </div>
+        <div class="main light">
+
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae
+                officiis
+                eum
+                aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim
+                dicta
+                soluta
+                praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
+                numquam
+                nihil ab voluptas quos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora
+                sunt
+                facilis repellat explicabo adipisci porro!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
+                assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore
+                saepe
+                harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil
+                minus
+                nobis. Recusandae, dignissimos doloribus.</p>
+
+        </div>
+
+        <div class="main darkred">
+
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae
+                officiis
+                eum
+                aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim
+                dicta
+                soluta
+                praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
+                numquam
+                nihil ab voluptas quos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora
+                sunt
+                facilis repellat explicabo adipisci porro!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
+                assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore
+                saepe
+                harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil
+                minus
+                nobis. Recusandae, dignissimos doloribus.</p>
+
+        </div>
     </div>
-    <div class="main light">
 
-        <h1>Hello World</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae officiis
-            eum
-            aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim dicta
-            soluta
-            praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
-            numquam
-            nihil ab voluptas quos.</p>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        referrerpolicy="no-referrer"></script>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora sunt
-            facilis repellat explicabo adipisci porro!</p>
+    <script>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
-            assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore saepe
-            harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil minus
-            nobis. Recusandae, dignissimos doloribus.</p>
+        document.addEventListener("DOMContentLoaded", () => {
 
-    </div>
+            const downloadPdf = () => {
+                let element = document.getElementById('element-to-print');
 
-    <div class="main light">
+                let opt =
+                {
+                    margin: 0,
+                    filename: 'sample_result' + '.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
 
-        <h1>Hello World</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae officiis
-            eum
-            aut deleniti totam et debitis possimus. Quibusdam fuga porro magni maxime fugiat eveniet vitae enim dicta
-            soluta
-            praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
-            numquam
-            nihil ab voluptas quos.</p>
+                html2pdf().set(opt).from(element).save();
+            }
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora sunt
-            facilis repellat explicabo adipisci porro!</p>
+            document.querySelector('#pdf-generate-btn').addEventListener('click', (event) => {
+                event.preventDefault();
+                alert('Downloading PDF!')
+                downloadPdf();
+            })
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
-            assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore saepe
-            harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil minus
-            nobis. Recusandae, dignissimos doloribus.</p>
+        })
 
-    </div>
+    </script>
+
 
 </body>
 
