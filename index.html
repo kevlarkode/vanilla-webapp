@@ -33,6 +33,7 @@
         * {
             padding: 0;
             margin: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         h1 {
@@ -71,12 +72,47 @@
             background-color: #8b0000;
             color: #eee;
         }
+
+        .btn {
+            border: 5px solid black;
+            padding: 1rem;
+            border-radius: 1rem;
+            outline: none;
+            font-size: large;
+            font-family: "Montserrat", sans-serif;
+            margin: 1rem;
+            font-weight: 900;
+            background-color: hsl(120, 51%, 50%);
+            cursor: pointer;
+            user-select:none;
+            box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+            transition: ease-in-out;
+        }
+
+        .btn:active {
+            box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="main dark">
+    <div class="btn-div">
+        <button class="btn" onclick="display()">Click to Print</button>
+        <script>
+            function display() {
+                window.print();
+            }
+        </script>
+    </div>
+
+    <div class="main light">
 
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae officiis
@@ -117,8 +153,8 @@
 
     </div>
 
-    <div class="main darkred">
-    
+    <div class="main light">
+
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At perferendis reprehenderit repudiandae officiis
             eum
@@ -127,15 +163,15 @@
             praesentium nostrum placeat cumque nesciunt, eum optio illum adipisci dolorum quae blanditiis ad. Iste
             numquam
             nihil ab voluptas quos.</p>
-    
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nam maxime, optio reprehenderit tempora sunt
             facilis repellat explicabo adipisci porro!</p>
-    
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque, quam ex, eaque debitis quisquam nam
             assumenda rem aspernatur dolor sit hic recusandae. Laboriosam distinctio itaque iste velit nisi dolore saepe
             harum sed deleniti totam laborum incidunt, nesciunt non veritatis eius asperiores magnam cumque nihil minus
             nobis. Recusandae, dignissimos doloribus.</p>
-    
+
     </div>
 
 </body>
